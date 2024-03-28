@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="OAHR">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .formulario {
+            color: #000000;
+            font: 13px/120% Tahoma,Arial,Helvetica,Verdana,sans-serif;
+            margin: 0.5em 0 1em;
+            padding: 0.5em;
+            background-color: rgb(56, 126, 231);
+        }
+        .formulario2{
+            color: #000000;
+            font: 13px/120% Tahoma,Arial,Helvetica,Verdana,sans-serif;
+            margin: 0.5em 0 1em;
+            padding: 0.5em;
+            background-color: rgb(190, 56, 231);
+        }
+        .formulario3{
+            color: #000000;
+            font: 13px/120% Tahoma,Arial,Helvetica,Verdana,sans-serif;
+            margin: 0.5em 0 1em;
+            padding: 0.5em;
+            background-color: rgb(27, 139, 134);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <div class="contacto">
+        <form class="formulario" action="/action_page.php">
+            <fieldset>
+                <legend>Datos personales</legend>
+                Nombre(s) <br> <input type="text" name="nombre" id="nombre" placeholder="tu nombre aquí" autocomplete="on" required> <br><br>
+                <label for="apellido-p">Apellido Paterno <br> <input type="text" name="apellido" id="apellido" placeholder="tu apellido paterno aquí" required></label>
+                <br><br>
+                <label for="apellido-m">Apellido Materno <br> <input type="text" name="apellido" id="apellido" placeholder="tu apellido materno aquí" required></label>
+                <br><br>
+                <label for="edad">Edad: <input type="number" name="edad" id="edad" min="1" max="99"> años</label>
+                <br><br>
+
+                <radiogroup >
+                    <label for="promociones">Marque cual es su Sexo:</label>
+                    <br>
+                    <input type="radio" id="sexo" name="sexo" value="hombre" > Hombre
+                    <input type="radio" id="sexo" name="sexo" value="mujer"> Mujer
+                    <input type="radio" id="sexo" name="sexo" value="otro" autofocus checked> Otro <br><br>
+                </radiogroup>
+                
+                <label for="apellido">Correo: <input type="email" name="correo" id="correo" placeholder="example@gmail.com"></label>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form class="formulario2" action="action_page.php">
+            <fieldset>
+                <legend>Datos escolares</legend>
+                Instituto de procedencia: <input type="text" name="instituto" id="instituto" placeholder=""> <br><br>
+                Promedio: <input type="number" min="1.0" max="100.0"> <br><br>
+
+                
+                <select name="" id="">
+                    <optgroup label="opcion 1">
+                        <option value="">Ing. en Sistemas Computacionales</option>
+                        <option value="">Ing. Quimica</option>
+                        <option value="">Ing. Insdustrial</option>
+                    </optgroup>
+                    <optgroup label="opcion 2">
+                        <option value="">Licenciatura en Gestion empresarial</option>
+                        <option value="">Licenciatura en Contabilidad</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form class="formulario3" action="action_page.php">
+            <fieldset>
+                <legend>Proyectos</legend>
+                <label for="no-proyectos">No. de proyectos <br> <input type="number" name="no-proyectos" min="1"></label>
+                <br><br>
+                <radiogroup >
+                    <label for="proyectos">Tipo de proyectos</label>
+                    <br> <br>
+                    <input type="radio" id="proy" name="proy" value="Innovadores" autofocus checked> Innovadores <br>
+                    <input type="radio" id="proy" name="proy" value="Industriales"> Industriales <br>
+                    <input type="radio" id="proy" name="proy" value="Escolares" > Escolares <br>
+                    <input type="radio" id="proy" name="proy" value="Agropecuarios"> Agropecuarios <br>
+                </radiogroup>
+                <br>           
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
